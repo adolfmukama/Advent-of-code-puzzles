@@ -1,0 +1,44 @@
+test_data = 'Game 1: 30 blue, 4 red; 1 red, 2 green, 6 blue; 2 green'
+test = {}
+emplist =[]
+x = test_data.split(":")
+y = x[1].split(";")
+print (y)
+z = [item.split(",") for item in y]
+print (z)
+#k = [item.split() for item in z]
+n = x[0].split()
+temp = n[0]
+n[0] = n[1]
+n[1] = temp
+n = [n[0] + " " + n[1]]
+print (n)
+z +=[n]
+print(z)
+for i in z:
+   
+    for x in i:
+        v = x.split(",")
+        h = [j.split() for j in v]
+        #print(h)
+        [d] = h
+        print(d)
+        for i in d:
+            while i == "blue":
+                g = d.index(i)-1
+            #if i.isdigit():
+                #v = int(i)
+                if int(d[g]) >= 12:
+                    emplist.append(z[-1:])
+                else:
+                    continue
+            #else:
+                #continue
+        
+    
+        #test[d[1]] = int(d[0])
+#print(test) 
+print(emplist)       
+
+
+
